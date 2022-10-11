@@ -1,0 +1,68 @@
+" Vim & NeoVim configuration for Photonico
+
+" Plugin list with Vim-Plug
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'itchyny/lightline.vim'
+Plug 'preservim/nerdtree'
+Plug 'szw/vim-dict'
+Plug 'valloric/youcompleteme'
+
+Plug 'https://github.com/wakatime/vim-wakatime.git'
+
+call plug#end()
+
+" Theme
+syntax enable
+
+" Tab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+" Line number
+set number
+set cursorline
+
+" Operation
+set mouse=a
+set nocompatible
+set ruler
+nnoremap <silent> <Leader>t :bel term<cr>
+nnoremap <silent> <Leader>y :bel vert term<cr>
+
+" Visual
+set cursorline
+set encoding=utf-8
+set fillchars=vert:\ 
+set laststatus=2
+set showtabline=2
+set statusline=black
+set t_Co=256
+"if (has("termguicolors"))
+"    set termguicolors
+"endif
+
+" NERDTree
+" autocmd vimenter * NERDTree
+nnoremap <silent> <leader>h :NERDTreeToggle<cr>
+nnoremap <silent> <Leader>f :NERDTreeFind<cr>
+
+" Lightline
+let g:lightline = {
+    \ 'colorscheme': 'rosepine',
+    \ 'active': {'right': [['fileformat']]},
+    \ 'separator': { 'left': '', 'right': '' },
+    \ 'subseparator': { 'left': '', 'right': '' }}
+
+let g:lightline.tabline = {
+	\ 'left': [['filetype'],['absolutepath'],['tabs']],
+	\ 'right': [['close'],['percent','lineinfo','fileencoding'],['paste']]}
+
+let s:palette = g:lightline#colorscheme#rosepine#palette
+let s:palette.tabline.left =   [['#FFFFFF', '#000000', 255, 069]]
+let s:palette.tabline.tabsel = [['#FFFFFF', '#000000', 255, 103]]
+let s:palette.tabline.middle = [['#FFFFFF', '#000000', 255, 248]]
+let s:palette.tabline.right =  [['#FFFFFF', '#000000', 255, 069]]
