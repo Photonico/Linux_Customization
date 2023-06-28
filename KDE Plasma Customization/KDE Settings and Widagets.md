@@ -3,7 +3,7 @@
 ## Kvantum Manager
 
 * Install
-  * ArchLinux: `sudo pacman -S kvantum`
+  * Arch Linux: `sudo pacman -S kvantum`
 
 * Kvantum themes store: [KDE Store](https://store.kde.org/browse?cat=123&ord=latest)
   * Themes: `Relax Light Kvantum`, `Blur Glassy Kvantum`, `pearKV`
@@ -14,7 +14,7 @@
 
 * Global Theme: `Breeze`, `Spectrum`, `WinSur`
 
-* Plasma theme: `Colloid`, `Canta`, `Fulent`, `Layan-light`, `Inverse`, `Spectrum`, `Afterglow`
+* Plasma theme: `Lightly Plasma`, `Colloid`, `Canta`, `Fulent`, `Layan-light`, `Inverse`, `Spectrum`, `Afterglow`
 
 * Colors: `Optical Breeze`, `Pear`
   * Colors path: `~/.local/share/color-schemes`
@@ -22,12 +22,12 @@
 * Window Decorations: `Breeze`, `OpenMandriva`
 
 * Fonts
-  * General: `CMU Concrete Bold`
-  * Fixed with: `FantasqueSansMono Nerd Font`, `Fira Comp`
-  * Small: `CMU Concrete @ 9pt`
-  * Toolbar: `CMU Concrete Bold`
-  * Menu: `CMU Concrete Bold`
-  * Window title: `CMU Concrete Bold`
+  * General: `Arbutus Slab @ 10pt`, `CMU Concrete Bold`
+  * Fixed with: `Photonico Code @ 12pt`, `FantasqueSansMono Nerd Font`, `Fira Comp`
+  * Small: `Arbutus Slab @ 8pt`, `CMU Concrete @ 9pt`
+  * Toolbar: `Arbutus Slab @ 10pt`, `CMU Concrete Bold`
+  * Menu: `Arbutus Slab @ 10pt`, `CMU Concrete Bold`
+  * Window title: `Arbutus Slab @ 10pt`, `Trocchi`, `CMU Concrete Bold`
 
 * Icons: `Tela circle`, `Sadri`
 
@@ -45,6 +45,8 @@
   * Desktop Effects - Blur
     * Blur Strength: `1`
     * Noise Strength: `8`
+  * Desktop Effects: LightlyShaders
+    * Install for Arch Linux: `yay -S lightlyshaders-git`
 
 * Windows Management
   * KWin Scripts
@@ -57,6 +59,9 @@
 * Color scheme: `GitHub Light`
 
 ## Widgets
+
+* Google client for KDE
+  * Arch Linux: `sudo pacman -S kio-gdrive`
 
 * Time Format: `ddd MMM dd yyyy`, `long date`
   * Font: `Latin Modern Roman Unslanted`
@@ -104,16 +109,20 @@
   * Style: `Dots`
   * Position: `10%`
 
+## Configuration
+
+* Monitor configuration initialization: `sudo rm -rf .local/share/kscreen`
+
 ## rEFind
 
 * Download from repository
-  * ArchLinux: `sudo pacman -S refind`
+  * Arch Linux: `sudo pacman -S refind`
 
-* Installation: `sudo refind-intall`
+* Installation: `sudo refind-install`
 
 * rEFind configuration: `/boot/efi/EFI/refind/refind.conf`
   * Hide useless option: `dont_scan_dirs /EFI/BOOT,/EFI/arch`
 
 * rEFind themes
   * Quick installation for Regular theme: `sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"`
-  * ArchLinux: `yay -S refind-theme-dracula refind-theme-nord refind-theme-regular-git`
+  * Arch Linux: `yay -S refind-theme-dracula refind-theme-nord refind-theme-regular-git`

@@ -11,7 +11,7 @@
   )
 
 ## OS identifier color.
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND="#F0F0F0"
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND="#FFFFFF"
   typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND="#8C64FF"
 
 ## context: user@hostname
@@ -22,7 +22,7 @@
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND="#E1FF37"
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_BACKGROUND="#5f87ff"
   # Default context color (no privileges, no SSH).
-  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND="#F0F0F0"
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND="#FFFFFF"
   typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND="#6482FF"
 
   # Don't show context unless running with privileges or in SSH.
@@ -33,7 +33,7 @@
   # Current directory background color.
   typeset -g POWERLEVEL9K_DIR_BACKGROUND="#14A0F0"
   # Default current directory foreground color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND="#F0F0F0"
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND="#FFFFFF"
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
@@ -51,19 +51,19 @@
 ## vcs: git status
 # Version control system colors.
 	typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND="#0078A0"
-  typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND="#F0F0F0"
+  typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND="#FFFFFF"
 
 	typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="#14BE6E"
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="#F0F0F0"
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="#FFFFFF"
 
 	typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="#0078A0"
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="#F0F0F0"
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="#FFFFFF"
 
 	typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND="#FFC814"
-	typeset -g POWERLEVEL9K_VCS_CONFLICTED_FOREGROUND="#F0F0F0"
+	typeset -g POWERLEVEL9K_VCS_CONFLICTED_FOREGROUND="#FFFFFF"
 
 	typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND="#555555"
-	typeset -g POWERLEVEL9K_VCS_LOADING_FOREGROUND="#F0F0F0"
+	typeset -g POWERLEVEL9K_VCS_LOADING_FOREGROUND="#FFFFFF"
 
   # Replace these:
   local       meta='%226F'
@@ -150,7 +150,7 @@
 
 ## time: current time
   # Current time color.
-	typeset -g POWERLEVEL9K_TIME_FOREGROUND="#F0F0F0"
+	typeset -g POWERLEVEL9K_TIME_FOREGROUND="#FFFFFF"
 	typeset -g POWERLEVEL9K_TIME_BACKGROUND="#6482FF"
 
 ## taskwarrior
@@ -161,8 +161,8 @@
 
 ## ram
   # RAM color.
-  typeset -g POWERLEVEL9K_RAM_FOREGROUND="#F0F0F0"
-  typeset -g POWERLEVEL9K_RAM_BACKGROUND="#F0B414"
+  typeset -g POWERLEVEL9K_RAM_FOREGROUND="#FFFFFF"
+  typeset -g POWERLEVEL9K_RAM_BACKGROUND="#F0AF00"
 
 ## vi_mode 
 
@@ -170,7 +170,7 @@
 
 ## vim shell
   # Vim shell indicator color.
-  typeset -g POWERLEVEL9K_VIM_SHELL_FOREGROUND="#F0F0F0"
+  typeset -g POWERLEVEL9K_VIM_SHELL_FOREGROUND="#FFFFFF"
   typeset -g POWERLEVEL9K_VIM_SHELL_BACKGROUND="#5ADC5A"
 
 ## xplr
@@ -196,10 +196,26 @@
 ## goenv
 
 ## pyenv
+  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND="#FFFFFF"
+  typeset -g POWERLEVEL9K_VIRTUALENV_BACKGROUND="#3232C8"
+  typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=true
+  typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_WITH_PYENV=true
 
 ## anaconda
+  typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND="#FFFFFF"
+  typeset -g POWERLEVEL9K_ANACONDA_BACKGROUND="#41B4C8"
 
 ## virtualenv
+  typeset -g POWERLEVEL9K_PYENV_FOREGROUND="#FFFFFF"
+  typeset -g POWERLEVEL9K_PYENV_BACKGROUND="#6482FF"
+  # Hide python version if it doesn't come from one of these sources.
+  typeset -g POWERLEVEL9K_PYENV_SOURCES=(shell local global)
+  # If set to false, hide python version if it's the same as global:
+  # $(pyenv version-name) == $(pyenv global).
+  typeset -g POWERLEVEL9K_PYENV_PROMPT_ALWAYS_SHOW=false
+  # If set to false, hide python version if it's equal to "system".
+  typeset -g POWERLEVEL9K_PYENV_SHOW_SYSTEM=true
+
 
 ## asdf
 
@@ -207,19 +223,19 @@
 
 ## background jobs
   # Background jobs color.
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND="#F0F0F0"
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND="#FFFFFF"
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND="#7896F0"
   # Don't show the number of background jobs.
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=true
 
 ## command_execution_time: duration of the last command
 	# Execution time color.
-		typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND="#F0F0F0"
+		typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND="#FFFFFF"
 		typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND="#5ADC5A"
 	# Show duration of the last command if takes longer than this many seconds.
 		typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD="#5ADC5A"
 	# Show this many fractional digits. Zero means round to seconds.
-		typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION="#F0F0F0"
+		typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION="#FFFFFF"
 
 ## status
   # Enable OK_PIPE, ERROR_PIPE and ERROR_SIGNAL status states to allow us to enable, disable and
